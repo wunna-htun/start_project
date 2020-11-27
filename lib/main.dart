@@ -1,5 +1,4 @@
-import 'dart:html';
-import 'dart:js';
+
 
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
@@ -124,7 +123,12 @@ class _RandomWordsState extends State<RandomWords>{
   Widget build(BuildContext context) {
     // TODO: implement build
   return Scaffold(
-    appBar: AppBar(title: Text("StartUp Name Generator"),),
+    appBar: AppBar(
+      title: Text("StartUp Name Generator"),
+      actions: [
+        IconButton(icon: Icon(Icons.list),onPressed: _pushSaved),
+      ],
+      ),
     body: _buildSuggestions(),
     );
 
